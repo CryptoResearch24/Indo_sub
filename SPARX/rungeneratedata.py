@@ -1,11 +1,11 @@
 ##################### run this file to generate dataset #####################
-from gendata_2class import generate_data
 
-dataset_size= 500000
+from SPARX_Data_Gen import generate_data
 
-# n_rounds=2
-for n_rounds in range(2, 3):
-    filename= f'./Data/2class_HIGHT_round{n_rounds}_new.csv'
+dataset_size= 100000
+
+for n_rounds in range(3, 7):
+    filename= f'./Data/Round{n_rounds}.csv'
     generate_data(dataset_size, n_rounds, filename)
     print(f'Done round {n_rounds}')
 print("Done")
